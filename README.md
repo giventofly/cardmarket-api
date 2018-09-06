@@ -15,6 +15,5 @@ This will use your login api info to search you stock, its just a simple php exa
    user karmacrow, use it as your baseline to other public api queries.
   - put some notes where i add problems to get it working.
 
-## todo:
-
- - do a function to execute queries to get card price (probably what everyone wants)
+## update when have the time or someone asks for it:
+ - do a function to execute queries to get card price 
