@@ -30,7 +30,7 @@ user karmacrow, use it as your baseline to other public api queries.
 - get card price:
 
     `$cardprice = getMCMinfo(null,null,1452);`
-*(bear in mind it returns and array (check code/cardmarket api for the returned values).*
+  *(bear in mind it returns an array (check code/cardmarket api for the returned values).*
 
 ### TODO:
 - optmize code / requests
