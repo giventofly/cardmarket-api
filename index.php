@@ -1,3 +1,5 @@
+  <?
+  
   $card = $_GET['card'];
   $var = urlencode($card);
     //min 3 chars
@@ -79,3 +81,6 @@ $decoded  = json_decode($content, true);
       }
 
     }
+
+
+    

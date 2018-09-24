@@ -1,19 +1,40 @@
-# mkmapi-php (cardmarket api)
+https://www.cardmarket.com/en/Magic api. Read their [api documents](https://www.mkmapi.eu/ws/documentation) :)
 
-cardmarket (old mcm/mkm) php simple api stock search and user stock search.
+## Files include and descriptions
 
-This will use your login api info to search you stock, its just a simple php example to use the https://www.cardmarket.com/en/Magic api. Read their documents :)
+  
 
-**With [index.php](https://github.com/giventofly/mkmapi-php/blob/master/index.php "index.php"):**
+**With [index.php](https://github.com/giventofly/mkmapi-php/blob/master/index.php  "index.php"):**
+
 * use as index.php?card=NAME TO SEARCH
 * edit index.php with your api credentials
 * see cards matching your query
 
-**with [articles-example.php](https://github.com/giventofly/mkmapi-php/blob/master/articles-example.php "articles-example.php"):**
+  
 
- - edit with your credentials with will show at max 2 articles from the 
-   user karmacrow, use it as your baseline to other public api queries.
-  - put some notes where i add problems to get it working.
+**with [articles-example.php](https://github.com/giventofly/mkmapi-php/blob/master/articles-example.php  "articles-example.php"):**
 
-## update when have the time or someone asks for it:
- - do a function to execute queries to get card price 
+- edit with your credentials and it will show at max 2 articles from the
+
+user karmacrow, use it as your baseline to other public api queries.
+
+**with [get-card-price.php](https://github.com/giventofly/mkmapi-php/blob/master/get-card-price.php  "get-card-price.php"):**
+
+- you give the card name and edition and get the info on it (including price), for development/production i would separate the request and cache the card id to use in subsequent requests (instead of querying always 2 times to get the info).
+- it will use the product id (the other option was the metaproduct id change to your needs).
+- Get card productid:
+
+    `$cardid = getMCMinfo('tarmogoyf','Future Sight');`  
+    *(returns an array with card id)*
+    
+- get card price:
+
+    `$cardprice = getMCMinfo(null,null,1452);`
+*(bear in mind it returns and array (check code/cardmarket api for the returned values).*
+
+### TODO:
+- optmize code / requests
+
+
+#### Shameless plug:
+Since you like mtg you might like my  [mtg card tooltip plugin](https://github.com/giventofly/MTG-Tooltip-Js) (vanilla javascript with some good options to show the card on mouse over)
